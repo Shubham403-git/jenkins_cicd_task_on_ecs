@@ -1,7 +1,15 @@
-FROM centos:8
-RUN yum install python3 -y
-#RUN pip3 install Flask
-COPY . .
+FROM python:3.7-slim
+
+COPY ./requirements.txt /app/requirements.txt
+
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
+COPY . /app
+
 EXPOSE 5000
-CMD "pip3 install Flask"
-CMD [ "python3","app.py" ]
+
+ENTRYPOINT [ "python" ]
+
+CMD [ "app.py" ]
