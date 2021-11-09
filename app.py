@@ -6,6 +6,9 @@ app = Flask(__name__)
 @app.route('/')
 def upload():
     return " CD TESTING "
+@app.route('/task')
+def upload():
+    return " Hello World"
 
 
 
