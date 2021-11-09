@@ -6,10 +6,6 @@ app = Flask(__name__)
 @app.route('/')
 def upload():
     return " Hello from Docker"
-@app.route('/task')
-def upload():
-    return " Hello World"
-
 
 
 if __name__ == "__main__":
