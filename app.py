@@ -7,7 +7,7 @@ app = Flask(__name__)
 def upload():
     return " Runing Inside docker Conatiner(flask App) "
 @app.route('/task')
-def upload():
+def taskdone():
     return "Task Done Successfully With CI-CD implementation."
 
 
