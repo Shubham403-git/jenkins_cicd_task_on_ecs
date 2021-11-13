@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_geek():
-    return '<h1>Hello from Flask & Docker</h2>'
+    return '<h1>Hello from Flask & Docker</h1>'
 #@app.route('/test')
 #def test():
  #   return '<h1>Hello Testing </h2>'
