@@ -1,10 +1,13 @@
-from flask import *
-
-
+from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def docker():
-    return " Hello World "
+def hello_geek():
+    return '<h1>Hello from Flask & Docker</h2>'
+#@app.route('/test')
+#def test():
+ #   return '<h1>Hello Testing </h2>'
+
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
