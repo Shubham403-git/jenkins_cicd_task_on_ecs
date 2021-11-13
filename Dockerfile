@@ -1,15 +1,10 @@
-FROM python:3.7-slim
+FROM python:3.8-slim-buster
 
-COPY ./requirements.txt /app/requirements.txt
+WORKDIR /python-docker
 
-WORKDIR /app
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
-RUN pip install -r requirements.txt
+COPY . .
 
-COPY . /app
-
-EXPOSE 5000
-
-ENTRYPOINT [ "python" ]
-
-CMD [ "app.py" ]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
